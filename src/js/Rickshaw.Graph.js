@@ -21,6 +21,8 @@ Rickshaw.Graph = function(args) {
 			offset: 'zero',
 			min: undefined,
 			max: undefined,
+			xMin: undefined,
+			xMax: undefined,
 			preserve: false,
 			xScale: undefined,
 			yScale: undefined,
@@ -73,7 +75,7 @@ Rickshaw.Graph = function(args) {
 			if (!Array.isArray(s.data)) {
 				throw "series data is not an array: " + JSON.stringify(s.data);
 			}
-			
+
 			if (s.data.length > 0) {
 				var x = s.data[0].x;
 				var y = s.data[0].y;
